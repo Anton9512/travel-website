@@ -5,7 +5,7 @@
   --first-color-second: hsl(190, 64%, 22%);
   --first-color-alt: hwb(190 64% 15%);
   --title-color: hsl(190, 64%, 18%);
-  --text-color: hsl(190, 24%, 22%);
+  --text-color: hsl(190, 24%, 35%);
   --text-color-light: hsl(190, 8%, 60%);
   --input-color: hsl(190, 24%, 97%);
   --body-color: hsl(190, 100%, 99%);
@@ -59,25 +59,4 @@
   }
 }
 
-.container {
-  max-width: 968px;
-  margin-left: var(--mb-1);
-  margin-right: var(--mb-1);
-}
 
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.section {
-  padding: 4.5rem 0 2.5rem;
-}
-
-.section_-title {
-  font-size: var(--h2-font-size);
-  color: var(--title-color);
-  text-align: center;
-  text-transform: capitalize;
-  margin-bottom: var(--mb-2);
-}
