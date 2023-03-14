@@ -1,3 +1,5 @@
+//= components/swiper-bundle.min.js
+
 /*-------SHOW MENU--------*/
 
 const navMenu = document.getElementById("nav-menu");
@@ -49,3 +51,18 @@ function scrollHeader() {
 window.addEventListener("scroll", scrollHeader);
 
 /*------------------------------------------------------- */
+
+/* SWIPER */
+var swiper = new Swiper(".discover__container", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  loop: true,
+  spaceBetween: 32,
+  coverflowEffect: {
+    rotate: 0,
+  },
+});
+
+/*-------------------------------------------------------*/

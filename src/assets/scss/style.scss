@@ -1,6 +1,7 @@
 @import "_null";
 @import "_fonts";
 @import "_constants";
+@import "swiper-bundle.min";
 
 .container {
   max-width: 968px;
@@ -302,6 +303,46 @@
   }
 }
 
-body {
-  height: 200vh;
+/*----------------------------*/
+
+/* DISCOVER */
+
+.discover {
+  &__card {
+    position: relative;
+    width: 300px; //200
+    overflow: hidden;
+  }
+
+  &__data {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1rem;
+  }
+  &__title,
+  &__description {
+    color: #fff;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+  }
+
+  &__description {
+    display: block;
+    font-size: 1rem;
+  }
+
+  &__img {
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.mySwiper-3d .swiper-slide-shadow-left,
+.mySwiper-3d .swiper-slide-shadow-right {
+  background-image: none;
 }
