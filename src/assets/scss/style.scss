@@ -5,8 +5,51 @@
 
 .container {
   max-width: 968px;
-  margin-left: var(--mb-1);
-  margin-right: var(--mb-1);
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+body {
+  margin: 3rem 0 0 0;
+  font-family: "OpenSans-Regular";
+  font-size: 0.938rem;
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: 500;
+  font-family: "Raleway-Medium";
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input {
+  border: none;
+  font-family: var(--body-font-size);
+}
+
+button {
+  cursor: pointer;
+}
+
+input {
+  outline: none;
 }
 
 .grid {
@@ -346,3 +389,63 @@
 .mySwiper-3d .swiper-slide-shadow-right {
   background-image: none;
 }
+
+/*----------------------------*/
+
+/* EXPERIENCE */
+
+.experience {
+  &__container {
+    row-gap: 2.5rem;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  &__content {
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    column-gap: 1rem;
+    padding: 0 2rem;
+  }
+
+  &__number {
+    font-size: var(--h2-font-size);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  &__description {
+    font-size: 0.875rem;
+  }
+
+  &__img {
+    position: relative;
+    padding-bottom: 2rem;
+  }
+
+  &__overlay:nth-child(1) {
+    width: 263px;
+    margin-right: 2rem;
+  }
+
+  &__overlay:nth-child(2) {
+    width: 120px;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+  }
+
+  &__img-one,
+  &__img-two {
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__overlay {
+    overflow: hidden;
+  }
+}
+
+/*----------------------------*/
