@@ -185,6 +185,23 @@ input {
   }
 }
 
+/* Active-link */
+
+.active-link {
+  position: relative;
+  font-weight: 600;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: var(--title-color);
+    width: 100%;
+    height: 1px;
+    bottom: -0.25rem;
+    left: 0;
+  }
+}
+
 .home {
   &__img {
     position: absolute;
@@ -550,7 +567,7 @@ input {
   }
 }
 
-/*----- SUBSCRIBE-------- */
+/*-------SUBSCRIBE-------- */
 
 .subscribe {
   &__bg {
@@ -687,3 +704,47 @@ input {
     }
   }
 }
+
+/*----------SCROLL UP---------- */
+
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -20%;
+  background-color: var(--first-color);
+  padding: 0.5rem;
+  display: flex;
+  opacity: 0.9;
+  z-index: 10;
+  transition: 0.4s;
+
+  &:hover {
+    background-color: var(--first-color-alt);
+    opacity: 1;
+  }
+
+  &__icon {
+    color: #fff;
+  }
+}
+
+.show-scroll {
+  bottom: 5rem;
+}
+
+/*----------SCROLL BAR---------- */
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: var(--scroll-bar-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scroll-thumb-color);
+  &:hover {
+    background-color: var(--text-color-light);
+  }
+}
+
+/*----------DARK LIGHT THEME---------- */
+

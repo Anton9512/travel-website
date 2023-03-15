@@ -13,8 +13,6 @@ if (navToggle) {
   });
 }
 
-/*--------------------------------------------------*/
-
 /*HIDDEN MENU*/
 
 if (navClose) {
@@ -22,8 +20,6 @@ if (navClose) {
     navMenu.classList.remove("show-menu");
   });
 }
-
-/*---------------------------------------------------------*/
 
 /* Remove nav-menu on link click */
 const navLink = document.querySelectorAll(".nav__link");
@@ -35,8 +31,6 @@ function linkAction() {
 }
 
 navLink.forEach((n) => n.addEventListener("click", linkAction));
-
-/*--------------------------------------------------------*/
 
 /* CHANGE BACKGROUND HEADER */
 
@@ -50,8 +44,6 @@ function scrollHeader() {
 
 window.addEventListener("scroll", scrollHeader);
 
-/*------------------------------------------------------- */
-
 /* SWIPER */
 var swiper = new Swiper(".discover__container", {
   effect: "coverflow",
@@ -64,8 +56,6 @@ var swiper = new Swiper(".discover__container", {
     rotate: 0,
   },
 });
-
-/*-------------------------------------------------------*/
 
 /*----------VIDEO-----------*/
 
@@ -93,10 +83,41 @@ videoButton.addEventListener("click", playPause);
 
 function finalVideo() {
   //video ends, icon change
-  videoIcon.classList.remove('ri-pause-line')
-  videoIcon.classList.add('ri-play-line')
+  videoIcon.classList.remove("ri-pause-line");
+  videoIcon.classList.add("ri-play-line");
 }
 
-videoFile.addEventListener('ended', finalVideo)
+videoFile.addEventListener("ended", finalVideo);
 
-/*-------------------------------------------------------*/
+/*--------------SHOW SCROLL TOP------------------*/
+
+function scrollUp() {
+  const scrollUp = document.getElementById("scroll-up");
+
+  if (this.scrollY >= 200) scrollUp.classList.add("show-scroll");
+  else scrollUp.classList.remove("show-scroll");
+}
+
+window.addEventListener("scroll", scrollUp);
+
+/*--------------SHOW SECTIONS ACTIVE LINK------------------*/
+
+const sections = document.querySelectorAll('section[id]')
+
+function scrollActive() {
+  const scrollY = window.pageYOffset
+
+  sections.forEach(current => {
+    const sectionHeight = current.offsetHeight
+    const sectionTop = current.offsetTop - 50;
+    sectionId = current.getAttribute('id')
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
+    } else {
+      document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
+    }
+  })
+}
+
+window.addEventListener('scroll', scrollActive)
