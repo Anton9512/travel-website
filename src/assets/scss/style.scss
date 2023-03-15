@@ -476,10 +476,96 @@ input {
   &__button-icon {
     font-size: 1.2rem;
   }
-
-  
 }
-
 
 /*----------------------------*/
 
+/*-----PLACES------*/
+
+.place {
+  &__card,
+  &__img {
+    height: 230px;
+  }
+
+  &__container {
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+  }
+
+  &__card {
+    position: relative;
+    overflow: hidden;
+    &:hover .place__img {
+      transform: scale(1.1);
+    }
+  }
+
+  &__content,
+  &__title {
+    color: #fff;
+  }
+
+  &__img {
+    transition: 0.3s;
+  }
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.75rem 0.75rem 1rem;
+  }
+
+  &__rating {
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+  }
+
+  &__rating-icon {
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+  }
+
+  &__rating-number {
+    font-size: var(--small-font-size);
+  }
+
+  &__title,
+  &__subtitle {
+    display: block;
+  }
+
+  &__data {
+  }
+
+  &__title {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  &__subtitle {
+    font-size: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  &__price {
+  }
+
+  &__button {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.75rem 1rem;
+  }
+}
+
+// .place__card:hover .place__img {
+//   transform: scale(1.1);
+// }
