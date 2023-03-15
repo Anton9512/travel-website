@@ -563,12 +563,6 @@ input {
     color: #fff;
   }
 
-  &__container {
-  }
-
-  &__title {
-  }
-
   &__description {
     text-align: center;
     margin-bottom: 2.5rem;
@@ -592,4 +586,24 @@ input {
   }
 }
 
-//1:21:10
+/*-------- SPONSOR------- */
+
+.sponsor {
+  &__container {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    justify-items: center;
+    row-gap: 3.5rem;
+  }
+
+  &__content {
+    &:hover .sponsor__img {
+      filter: invert(0.5);
+    }
+  }
+
+  &__img {
+    width: 90px;
+    filter: invert(0.7);
+    transition: 0.3s;
+  }
+}
