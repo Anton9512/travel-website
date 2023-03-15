@@ -278,7 +278,7 @@ input {
 
 .button {
   display: inline-block;
-  background-color: var(--first-color);
+  background-color: var(--first-color-second);
   color: #fff;
   padding: 1rem 2rem;
   font-weight: var(--font-semi-bold);
@@ -449,3 +449,37 @@ input {
 }
 
 /*----------------------------*/
+
+/* VIDEO */
+
+.video {
+  &__container {
+    padding-bottom: 1rem;
+  }
+
+  &__description {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  &__content {
+    position: relative;
+  }
+
+  &__button {
+    position: absolute;
+    right: 1rem;
+    bottom: -1rem;
+    padding: 1rem 1.5rem;
+  }
+
+  &__button-icon {
+    font-size: 1.2rem;
+  }
+
+  
+}
+
+
+/*----------------------------*/
+

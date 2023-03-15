@@ -66,3 +66,37 @@ var swiper = new Swiper(".discover__container", {
 });
 
 /*-------------------------------------------------------*/
+
+/*----------VIDEO-----------*/
+
+const videoFile = document.getElementById("video-file");
+const videoButton = document.getElementById("video-button");
+const videoIcon = document.getElementById("video-icon");
+
+function playPause() {
+  if (videoFile.paused) {
+    //Play video
+    videoFile.play();
+
+    //Change icon
+    videoIcon.classList.add("ri-pause-line");
+    videoIcon.classList.remove("ri-play-line");
+  } else {
+    videoFile.pause();
+
+    videoIcon.classList.add("ri-play-line");
+    videoIcon.classList.remove("ri-pause-line");
+  }
+}
+
+videoButton.addEventListener("click", playPause);
+
+function finalVideo() {
+  //video ends, icon change
+  videoIcon.classList.remove('ri-pause-line')
+  videoIcon.classList.add('ri-play-line')
+}
+
+videoFile.addEventListener('ended', finalVideo)
+
+/*-------------------------------------------------------*/
