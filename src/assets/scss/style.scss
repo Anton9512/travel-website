@@ -174,8 +174,6 @@ input {
   right: 0;
 }
 
-/*-----------*/
-
 /* Change background header */
 .scroll-header {
   background-color: var(--body-color);
@@ -186,10 +184,6 @@ input {
     color: var(--title-color);
   }
 }
-
-/*--------------------------*/
-
-/*-----HOME-------*/
 
 .home {
   &__img {
@@ -301,9 +295,7 @@ input {
   }
 }
 
-/*----------------------------*/
-
-/* ABOUT */
+/*------- -ABOUT-------- */
 
 .about {
   &__data {
@@ -346,9 +338,7 @@ input {
   }
 }
 
-/*----------------------------*/
-
-/* DISCOVER */
+/*------- DISCOVER------- */
 
 .discover {
   &__card {
@@ -390,9 +380,7 @@ input {
   background-image: none;
 }
 
-/*----------------------------*/
-
-/* EXPERIENCE */
+/*----- EXPERIENCE------ */
 
 .experience {
   &__container {
@@ -448,9 +436,7 @@ input {
   }
 }
 
-/*----------------------------*/
-
-/* VIDEO */
+/*------ VIDEO------ */
 
 .video {
   &__container {
@@ -477,8 +463,6 @@ input {
     font-size: 1.2rem;
   }
 }
-
-/*----------------------------*/
 
 /*-----PLACES------*/
 
@@ -566,6 +550,46 @@ input {
   }
 }
 
-// .place__card:hover .place__img {
-//   transform: scale(1.1);
-// }
+/*----- SUBSCRIBE-------- */
+
+.subscribe {
+  &__bg {
+    background-color: var(--first-color-second);
+    padding: 2.5rem 0;
+  }
+
+  &__title,
+  &__description {
+    color: #fff;
+  }
+
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__description {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  &__form {
+    background-color: var(--input-color);
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__input {
+    width: 70%;
+    padding-right: 0.5rem;
+    background-color: var(--input-color);
+    color: var(--text-color);
+    &::placeholder {
+      color: var(--text-color);
+    }
+  }
+}
+
+//1:21:10
