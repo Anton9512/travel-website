@@ -45,6 +45,10 @@ input {
   outline: none;
 }
 
+.main {
+  overflow-x: hidden;
+}
+
 .grid {
   display: grid;
   gap: 1.5rem;
@@ -750,8 +754,6 @@ body.dark-theme {
 
 /* --------------------MEDIA QUERIES---------------------- */
 
-// For small devices
-
 @media screen and (max-width: 340px) {
   .place {
     &__container {
@@ -784,8 +786,6 @@ body.dark-theme {
     padding: 0;
   }
 }
-
-//For medium devices
 
 @media screen and (min-width: 568px) {
   .video {
@@ -1076,7 +1076,6 @@ body.dark-theme {
     &__container,
     &__img {
       height: 640px;
-      
     }
   }
 }

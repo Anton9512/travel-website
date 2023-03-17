@@ -1,6 +1,7 @@
 //= components/swiper-bundle.min.js
+//= components/scrollreveal.min.js
 
-/*-------SHOW MENU--------*/
+/*--------------------------SHOW MENU---------------------------------*/
 
 const navMenu = document.getElementById("nav-menu");
 
@@ -13,7 +14,7 @@ if (navToggle) {
   });
 }
 
-/*HIDDEN MENU*/
+/*-------------------------HIDDEN MENU---------------------------------*/
 
 if (navClose) {
   navClose.addEventListener("click", function () {
@@ -57,7 +58,7 @@ var swiper = new Swiper(".discover__container", {
   },
 });
 
-/*----------VIDEO-----------*/
+/*---------------------------VIDEO-----------------------------*/
 
 const videoFile = document.getElementById("video-file");
 const videoButton = document.getElementById("video-button");
@@ -89,7 +90,7 @@ function finalVideo() {
 
 videoFile.addEventListener("ended", finalVideo);
 
-/*--------------SHOW SCROLL TOP------------------*/
+/*---------------------------SHOW SCROLL TOP-----------------------------*/
 
 function scrollUp() {
   const scrollUp = document.getElementById("scroll-up");
@@ -163,4 +164,30 @@ themeButton.addEventListener("click", () => {
   // We save the theme and the current icon that the
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
+});
+
+/* ----------------SCROLL REVEAL ANIMATION------------------ */
+
+const sr = ScrollReveal({
+  distance: "60px",
+  duration: 2800,
+  reset: true,
+});
+
+sr.reveal(
+  `.home__data, .home__social-link, .home__info ,
+ .discover__container, .experience__data, .experience__overlay, .place__card, .sponsor__content, .footer__data, .footer__rights `,
+  {
+    origin: "top",
+    interval: 100,
+  }
+);
+
+sr.reveal(`.about__data, .video__description, .subscribe__description`, {
+  origin: "left",
+});
+
+sr.reveal(`.about__img, .video__content, .subscribe__form`, {
+  origin: "right",
+  interval: 100,
 });
